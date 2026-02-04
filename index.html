@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheddar Box Cafe | Louisville's Premier Gourmet Deli & Cafe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Analytics 4 Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+
+      // GA4 Event Trackers
+      function trackFormSubmission() {
+        gtag('event', 'form_submission', {
+          'event_category': 'Engagement',
+          'event_label': 'Free Lunch Promo'
+        });
+      }
+
+      function trackMenuClick(itemName) {
+        gtag('event', 'select_item', {
+          'item_name': itemName,
+          'content_type': 'menu_item'
+        });
+      }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-font {
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans">
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-[80vh] flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 class="text-5xl md:text-8xl font-bold mb-4 drop-shadow-xl accent-font italic">The Cheddar Box Cafe</h1>
+        <p class="text-xl md:text-3xl mb-8 max-w-3xl drop-shadow-md font-light">Gourmet Sandwiches, Pasta Salads & Fine Catering Since 1979.</p>
+        <a href="#promo" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 shadow-2xl uppercase tracking-widest text-sm">
+            Win FREE Lunch for a Month
+        </a>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 max-w-5xl mx-auto text-center">
+        <span class="text-amber-600 uppercase tracking-widest font-bold text-sm">Our Story</span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-stone-800 accent-font">A Louisville Tradition</h2>
+        <p class="text-xl leading-relaxed text-stone-600 italic max-w-3xl mx-auto">
+            Located in Middleburg Plaza on Shelbyville Road, The Cheddar Box Cafe is a full-service cafe, carry-out deli, and catering company. We are renowned for our signature chicken salads, homemade pastas, and gourmet entrees prepared with the highest quality ingredients.
+        </p>
+    </section>
+
+    <!-- Featured Menu Items -->
+    <section class="py-20 bg-stone-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-stone-800 accent-font">Local Favorites</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Item 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-amber-500 hover:shadow-2xl transition duration-300 cursor-pointer" onclick="trackMenuClick('Honey Pecan Chicken Salad')">
+                    <h3 class="text-2xl font-bold mb-3 accent-font text-amber-900">Honey Pecan Chicken Salad</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">Our world-famous chicken salad featuring tender poached chicken, toasted pecans, and a hint of local honey.</p>
+                    <span class="text-amber-700 font-bold uppercase tracking-tighter text-sm">A Louisville Staple</span>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-stone-800 hover:shadow-2xl transition duration-300 cursor-pointer" onclick="trackMenuClick('Tomato Artichoke Soup')">
+                    <h3 class="text-2xl font-bold mb-3 accent-font text-amber-900">Tomato Artichoke Soup</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">Rich, creamy, and packed with flavor. The perfect companion to any of our signature gourmet sandwiches.</p>
+                    <span class="text-amber-700 font-bold uppercase tracking-tighter text-sm">Signature Soup</span>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-amber-500 hover:shadow-2xl transition duration-300 cursor-pointer" onclick="trackMenuClick('Curry Chicken Salad')">
+                    <h3 class="text-2xl font-bold mb-3 accent-font text-amber-900">Curry Chicken Salad</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">A unique twist on our classic, served on a bed of fresh lettuce or as a hearty sandwich with artisan bread.</p>
+                    <span class="text-amber-700 font-bold uppercase tracking-tighter text-sm">Customer Favorite</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <p class="text-stone-500 mb-4 uppercase tracking-widest text-xs font-bold font-sans">Full Deli & Catering Menu Available</p>
+                <a href="#" class="text-amber-600 font-bold text-lg hover:underline" onclick="trackMenuClick('Full Menu View')">Browse the Full Menu &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Section -->
+    <section id="promo" class="py-24 bg-stone-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-amber-500"></div>
+        <div class="max-w-xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-5xl font-bold mb-6 accent-font">Lunch is on Us</h2>
+            <p class="text-stone-400 text-lg mb-12">Join our inner circle. Be first to hear about daily specials and enter to win <strong>Free Lunch for a Month</strong>!</p>
+            
+            <form name="lunch-signup" method="POST" data-netlify="true" onsubmit="trackFormSubmission()" class="text-left bg-white p-10 rounded-3xl shadow-2xl text-stone-900">
+                <input type="hidden" name="form-name" value="lunch-signup" />
+                <div class="mb-6">
+                    <label class="block text-stone-500 text-xs uppercase tracking-widest font-bold mb-2" for="first_name">First Name</label>
+                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="text" name="first_name" id="first_name" required placeholder="Kevin">
+                </div>
+                <div class="mb-8">
+                    <label class="block text-stone-500 text-xs uppercase tracking-widest font-bold mb-2" for="email">Email Address</label>
+                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="email" name="email" id="email" required placeholder="stone.kevin@gmail.com">
+                </div>
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-5 rounded-2xl transition duration-300 shadow-xl uppercase tracking-widest text-sm">
+                    Enter the Drawing
+                </button>
+                <p class="mt-6 text-xs text-stone-400 text-center leading-relaxed">Winner selected randomly once per month. No purchase necessary.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-white text-stone-500 px-4 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+            <div>
+                <h4 class="text-stone-800 font-bold text-2xl mb-2 accent-font">The Cheddar Box Cafe</h4>
+                <p class="text-stone-400">12121 Shelbyville Rd, Louisville, KY 40243</p>
+                <p class="mt-4 text-xs font-bold uppercase tracking-widest">&copy; 2026 Cheddar Box Cafe</p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">Developed By</p>
+                <a href="https://redtag.digital?utm_source=cheddarbox&utm_medium=footer" target="_blank" rel="noopener" class="opacity-70 hover:opacity-100 transition">
+                    <img src="https://redtag.digital/wp-content/uploads/2023/12/redtag-logo-dark.svg" alt="RedTag" class="h-6">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
