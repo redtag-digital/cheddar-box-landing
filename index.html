@@ -99,20 +99,23 @@
             <h2 class="text-5xl font-bold mb-6 accent-font">Lunch is on Us</h2>
             <p class="text-stone-400 text-lg mb-12">Join our inner circle. Be first to hear about daily specials and enter to win <strong>Free Lunch for a Month</strong>!</p>
             
-            <form name="lunch-signup" method="POST" data-netlify="true" onsubmit="trackFormSubmission()" class="text-left bg-white p-10 rounded-3xl shadow-2xl text-stone-900">
+            <form name="lunch-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="trackFormSubmission()" class="text-left bg-white p-10 rounded-3xl shadow-2xl text-stone-900">
                 <input type="hidden" name="form-name" value="lunch-signup" />
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="mb-6">
                     <label class="block text-stone-500 text-xs uppercase tracking-widest font-bold mb-2" for="first_name">First Name</label>
-                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="text" name="first_name" id="first_name" required placeholder="Kevin">
+                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="text" name="first_name" id="first_name" required placeholder="Your Name">
                 </div>
                 <div class="mb-8">
                     <label class="block text-stone-500 text-xs uppercase tracking-widest font-bold mb-2" for="email">Email Address</label>
-                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="email" name="email" id="email" required placeholder="stone.kevin@gmail.com">
+                    <input class="w-full px-5 py-4 bg-stone-100 rounded-xl border-2 border-transparent focus:border-amber-500 focus:bg-white focus:outline-none transition duration-200" type="email" name="email" id="email" required placeholder="your.email@example.com">
                 </div>
                 <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-5 rounded-2xl transition duration-300 shadow-xl uppercase tracking-widest text-sm">
                     Enter the Drawing
                 </button>
-                <p class="mt-6 text-xs text-stone-400 text-center leading-relaxed">Winner selected randomly once per month. No purchase necessary.</p>
+                <p class="mt-6 text-xs text-stone-400 text-center leading-relaxed">Winner selected randomly once per month. No purchase necessary. <a href="rules.html" class="underline hover:text-amber-500">Official Rules</a></p>
             </form>
         </div>
     </section>
